@@ -1,0 +1,10 @@
+application: QMonitor Platform
+version: 1
+api_version: 1
+
+handlers:
+- url: /do_job/(?P<worker>.*)/.*
+  handler: tornado_handlers.common.WorkerHanler
+
+- url: /justnow
+  handler: tornado_handlers.common.JustNowHandler
